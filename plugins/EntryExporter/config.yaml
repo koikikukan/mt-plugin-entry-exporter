@@ -5,7 +5,7 @@ author_name: Yujiro Araki
 plugin_link: http://github.com/koikikukan/mt-plugin-entry-exporter
 doc_link: http://github.com/koikikukan/mt-plugin-entry-exporter
 description: <__trans phrase="EntryExporter.">
-version: 0.01
+version: 0.02
 l10n_lexicon:
     ja:
         EntryExporter.: ブログ記事をテーマにエクスポートします
