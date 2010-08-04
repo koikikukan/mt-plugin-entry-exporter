@@ -2,19 +2,21 @@ id: EntryExporter
 name: EntryExporter
 author_link: http://www.koikikukan.com/
 author_name: Yujiro Araki
-plugin_link: http://www.koikikukan.com/archives/2010/xx/xx-015555.php
-doc_link: http://www.koikikukan.com/archives/2010/xx/xx-015555.php
+plugin_link: http://github.com/koikikukan/mt-plugin-entry-exporter
+doc_link: http://github.com/koikikukan/mt-plugin-entry-exporter
 description: <__trans phrase="EntryExporter.">
 version: 0.01
 l10n_lexicon:
     ja:
         EntryExporter.: ブログ記事をテーマにエクスポートします
         Entries: ブログ記事
+        entries: ブログ記事
 theme_element_handlers:
     default_entries:
         label: Entries
         importer:
-            import: $EntryExporter::EntryExporter::Theme::import_entries
+            import: $EntryExporter::EntryExporter::Theme::import
+            info: $EntryExporter::EntryExporter::Theme::info
         exporter:
             params: plugin_default_entries_export_ids
             template: $EntryExporter::EntryExporter::Theme::template

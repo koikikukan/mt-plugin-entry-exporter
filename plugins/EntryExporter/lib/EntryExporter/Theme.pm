@@ -75,15 +75,7 @@ sub export {
 
 }
 
-sub finalize {
-    my $app = shift;
-    my ( $blog, $theme_hash, $tmpdir, $setting ) = @_;
-    my $success = 0;
-    ## some work for $tmpdir
-    return 1;
-}
-
-sub import_entries {
+sub import {
     my ( $element, $theme, $obj_to_apply ) = @_;
     my $entries = $element->{data};
     _add_entries( $theme, $obj_to_apply, $entries, 'entry' )
@@ -174,6 +166,15 @@ sub create_category {
     $cat->save
       or die $cat->errstr;
     return $cat;
+}
+
+sub info {
+    my ( $element, $theme, $blog ) = @_;
+    my $data = $element->{data};
+    my $plugin = MT->component('EntryExporter');
+    return sub {
+        $plugin->translate( 'Entries' ) .'('. MT->translate( '[_1] ', scalar keys %{$element->{data}} ) . $plugin->translate( 'entries' ). ')';
+    };
 }
 
 1;
