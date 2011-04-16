@@ -1,3 +1,10 @@
+# AssetExporter
+#
+# Release 0.01 (Jul 31, 2010)
+# Release 0.10 (Apr 17, 2011) for 5.1.
+#
+# Copyright (c) 2004-2011 Yujiro Araki
+
 id: EntryExporter
 name: EntryExporter
 author_link: http://www.koikikukan.com/

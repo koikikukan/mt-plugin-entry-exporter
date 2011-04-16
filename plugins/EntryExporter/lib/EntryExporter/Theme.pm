@@ -6,6 +6,9 @@ use MT::Entry;
 
 sub condition {
     my ( $blog ) = @_;
+
+    return 0 if MT->version_number < 5.1;
+
     my $entry = MT->model('entry')->load({ blog_id => $blog->id }, { limit => 1 });
     return defined $entry ? 1 : 0;
 }
